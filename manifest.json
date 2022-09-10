@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+  
+    "name": "Time As Money", 
+    "description": "Convert prices to hourly rates",
+    "version": "0.69",
+    "author": "Vivek Bhookya",
+  
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Time As Money"
+      },
+  
+    "background.service_worker": {
+        "scripts": ["jquery.min.js", "js.js"],
+        "persistent": false
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["https://*.stockx.com/*"],
+        "js": ["jquery.min.js", "js.js"],
+        "run_at": "document_end"
+      }
+    ],
+  
+    "permissions": [
+      "activeTab",
+      "storage"
+    ]
+  }

@@ -3,6 +3,10 @@
 // A whole budgeting framework
 // Add a popup where you an just enter a raw value for your rate and the cost
 //
+// Add a whole ass website tool, and make the chrome extension a supplemental tool,
+//  and use GitHub pages to host the tool for free???? Dashboard for Cost of Time / Time as a Resource?
+// Visualizer of a horizontal line (of length hours to be spent collecting money) with colored chunks (expenses)
+// todo list? feature list? ui? make this a project? hahahah
 
 //////////
 
@@ -40,23 +44,3 @@ function checkForPrice(event) {
 }
 
 document.addEventListener("mouseover", checkForPrice);
-
-// // bind to each span
-
-// $("p").unbind("hover");
-
-// $("p").hover(function () {
-//   if (this.innerText.includes("$")) {
-//     console.log(this.innerText);
-//   }
-
-//   // todo add "title" with hourly rate as the text to the element
-//   // .setAttribute('title', calculateRateAsString());
-// });
-
-// // Find anything with a price tag
-// // console.log that shit
-
-// // let findFirstMatchRegex = /\$\d+.\d+/i;
-
-// // how to find all matching patterns?

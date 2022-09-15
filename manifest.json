@@ -12,14 +12,14 @@
       },
   
     "background.service_worker": {
-        "scripts": ["jquery.min.js", "js.js"],
+        "scripts": ["js.js"],
         "persistent": false
     },
   
     "content_scripts": [
       {
         "matches": ["https://*.stockx.com/*"],
-        "js": ["jquery.min.js", "js.js"],
+        "js": ["js.js"],
         "run_at": "document_end"
       }
     ],

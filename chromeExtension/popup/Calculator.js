@@ -17,6 +17,24 @@ function isValidMonetaryFormat(value) {
   return moneyRegexLol.exec(value)[0];
 }
 
+// function convertRawHoursToClockTime(rawHours) {
+//   let diff = rawHours * 60 * 60; // Minutes, seconds, milliseconds
+
+//   let d = Math.floor(diff / (24 * 60 * 60));
+//   diff = diff - d * 24 * 60 * 60;
+//   let h = Math.floor(diff / (60 * 60));
+//   diff = diff - h * 60 * 60;
+//   let m = Math.floor(diff / 60);
+//   diff = diff - m * 60;
+//   let s = diff;
+
+//   let streak = document.getElementById("streak");
+//   if (streak) {
+//     streak.innerHTML =
+//       d + " day(s), " + h + " hour(s), " + m + " min(s), " + s + " sec(s)";
+//   } // todo, instead, use Years Months Weeks Days Hours.
+// }
+
 function calculateWork() {
   // validate input
   let hourlyRate = document.getElementById("input_hourly_rate").value;
@@ -33,15 +51,8 @@ function calculateWork() {
       Math.ceil(work) + " real hours";
 
     document.getElementById("p_work_required").innerText = work + " math hours";
+    // convertRawHoursToClockTime(Math.ceil(work));
   } // else, do nothing. maybe show an error message?
 }
 
-function main() {
-  let input_hourly_rate = document.getElementById("input_hourly_rate");
-  let input_item_cost = document.getElementById("input_item_cost");
-
-  input_hourly_rate.addEventListener("change", calculateWork);
-  input_item_cost.addEventListener("change", calculateWork);
-}
-
-main();
+document.addEventListener("change", calculateWork);

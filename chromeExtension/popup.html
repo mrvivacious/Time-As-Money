@@ -16,19 +16,22 @@
     <body>
         <h1>Time As Money</h1>
 
-        <h3>Hourly rate</h3>
-        <!-- <br> -->
-        $ <input id="input_hourly_rate" type="number" placeholder="7.95">
-        <button id="btn_save_rate">Save</button>
-        <br>
-
         <h3>Cost of item</h3>
-        <!-- <br> -->
         $ <input id="input_item_cost" type="number" placeholder="20.00">
+        <button>Calculate</button>
+        <br>
+
+        <h3>Hourly rate</h3>
+        $ <input id="input_hourly_rate" type="number" placeholder="7.95">
+        <button id="btn_save_rate">Save rate</button>
+        <br>
+
+        <h3>Duration of average workday</h3>
+        <input id="input_workday_duration" type="number" placeholder="8.0">
+        <button id="btn_save_duration">Save hours</button>
         <br>
         <br>
 
-        <button>Calculate</button>
 
         <hr>
         <h3>Hours needed:</h3>
@@ -36,12 +39,12 @@
 
         <strong>
             <p id="p_work_required_rounded">
-                $x.xx
+                x real hours
             </p>
         </strong>
 
         <p id="p_work_required">
-            $x.xx
+            x.xx math hours
         </p>
 
     </body>

@@ -18,7 +18,7 @@
   
     "content_scripts": [
       {
-        "matches": ["https://*.stockx.com/*"],
+        "matches": ["<all_urls>"],
         "js": ["js.js"],
         "run_at": "document_end"
       }

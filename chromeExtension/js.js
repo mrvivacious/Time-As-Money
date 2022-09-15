@@ -7,7 +7,7 @@
 //  and use GitHub pages to host the tool for free???? Dashboard for Cost of Time / Time as a Resource?
 // Visualizer of a horizontal line (of length hours to be spent collecting money) with colored chunks (expenses)
 // todo list? feature list? ui? make this a project? hahahah
-
+// todo refactor shit at the end of a feature cycle
 //////////
 
 console.log("hello from Time As Money");
@@ -28,17 +28,22 @@ function checkForPrice(event) {
 
     if (cost[1]) {
       let costAsNum = parseFloat(cost[1]);
-      let sampleWage = 11.0; // TODO get this data from the user via chrome.storage (prompt the to submit from within the popup or smth)
+      // let sampleWage = 11.0; // TODO get this data from the user via chrome.storage (prompt the to submit from within the popup or smth)
       // maybe, if samplewage is null, add a tooltip to every price that says "u can add a wage in the popup to see time calculated!"
 
-      let time = costAsNum / sampleWage;
+      chrome.storage.sync.get("hourlyRate", function (returnedObject) {
+        let wage = returnedObject["hourlyRate"];
+        let time = costAsNum / wage;
 
-      htmlElement.setAttribute(
-        "title",
-        "At a wage of $11.00, the hours needed to buy this are\n\n" +
-          time +
-          " hours"
-      );
+        htmlElement.setAttribute(
+          "title",
+          "At a wage of $" +
+            wage +
+            ", the hours needed to buy this are\n\n" +
+            Math.ceil(time) +
+            " hours"
+        );
+      });
     }
   }
 }

@@ -53,6 +53,7 @@ function getUserData() {
       return userData;
     } else {
       createEmptyUserData();
+      return undefined;
     }
 
     // let hourlyRate = parseFloat(userData["HourlyRate"]);

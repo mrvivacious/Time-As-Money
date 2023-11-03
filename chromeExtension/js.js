@@ -66,7 +66,9 @@ function checkForPrice(event) {
         );
         p.appendChild(t);
 
-        htmlElement.appendChild(p);
+        if (!elementText.includes('day(s)')) {
+          htmlElement.appendChild(p);
+        }
       });
     }
   }

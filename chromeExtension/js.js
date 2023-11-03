@@ -49,13 +49,15 @@ function checkForPrice(event) {
 
         htmlElement.setAttribute(
           "title",
-          "Wage: $" +
+          "Time:\n" +
+          prettyPrintTime(timeAsHours, workDuration) +
+          "\n\nCost: $" +
+          costAsNum +
+          "\nWage: $" +
             wage +
             "\nWork: " +
             workDuration +
-            " hours" +
-            "\n\nTime:\n\n" +
-            prettyPrintTime(timeAsHours, workDuration)
+            " hours"
         );
 
         let p = document.createElement("p");

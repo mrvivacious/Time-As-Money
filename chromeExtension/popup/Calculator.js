@@ -1,6 +1,3 @@
-// on input field change
-// update wage
-
 function calculateWorkRequired(itemCost, hourlyRate) {
   return itemCost / hourlyRate;
 }
@@ -11,7 +8,6 @@ function isValidMonetaryFormat(value) {
   }
 
   let moneyRegexLol = /\d+.\d+/i;
-
   console.log(moneyRegexLol.exec(value)[0]);
 
   return moneyRegexLol.exec(value)[0];
@@ -45,10 +41,7 @@ function calculateWork() {
       Math.ceil(parseFloat(workdaysRequired)) + " real workdays";
 
     document.getElementById("p_workdays_required").innerText = workdaysRequired + ' math workdays';
-
-    
-
-  } // else, do nothing. maybe show an error message?
+  }
 }
 
 document.addEventListener("change", calculateWork);

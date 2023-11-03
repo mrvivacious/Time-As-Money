@@ -10,12 +10,7 @@
         "default_popup": "popup.html",
         "default_title": "Time As Money"
       },
-  
-    "background.service_worker": {
-        "scripts": ["js.js"],
-        "persistent": false
-    },
-  
+    
     "content_scripts": [
       {
         "matches": ["<all_urls>"],

@@ -17,23 +17,9 @@ function isValidMonetaryFormat(value) {
   return moneyRegexLol.exec(value)[0];
 }
 
-// function convertRawHoursToClockTime(rawHours) {
-//   let diff = rawHours * 60 * 60; // Minutes, seconds, milliseconds
-
-//   let d = Math.floor(diff / (24 * 60 * 60));
-//   diff = diff - d * 24 * 60 * 60;
-//   let h = Math.floor(diff / (60 * 60));
-//   diff = diff - h * 60 * 60;
-//   let m = Math.floor(diff / 60);
-//   diff = diff - m * 60;
-//   let s = diff;
-
-//   let streak = document.getElementById("streak");
-//   if (streak) {
-//     streak.innerHTML =
-//       d + " day(s), " + h + " hour(s), " + m + " min(s), " + s + " sec(s)";
-//   } // todo, instead, use Years Months Weeks Days Hours.
-// }
+function convertRawHoursToClockTime(hoursWorkedInTotal, workdayDuration) {
+  return (hoursWorkedInTotal / workdayDuration) + ' workdays';
+}
 
 function calculateWork() {
   // validate input
@@ -51,7 +37,17 @@ function calculateWork() {
       Math.ceil(work) + " real hours";
 
     document.getElementById("p_work_required").innerText = work + " math hours";
-    // convertRawHoursToClockTime(Math.ceil(work));
+    
+    let workdayDuration = document.getElementById('input_workday_duration').value;
+    let workdaysRequired = convertRawHoursToClockTime(Math.ceil(work), workdayDuration);
+    
+    document.getElementById("p_workdays_required_rounded").innerText =
+      Math.ceil(parseFloat(workdaysRequired)) + " real workdays";
+
+    document.getElementById("p_workdays_required").innerText = workdaysRequired + ' math workdays';
+
+    
+
   } // else, do nothing. maybe show an error message?
 }
 

@@ -1,13 +1,19 @@
 // IDEAS from Alex at Emma's Cafe
 // - Calculate rate after expenses and bills ("disposable income")
+// Vivek: idk wtf that means but yea could be in an 'expanded calculator' section
 // A whole budgeting framework
-// Add a popup where you an just enter a raw value for your rate and the cost
+// add a UI of some sort. maybe later.
 //
 // Add a whole ass website tool, and make the chrome extension a supplemental tool,
 //  and use GitHub pages to host the tool for free???? Dashboard for Cost of Time / Time as a Resource?
 // Visualizer of a horizontal line (of length hours to be spent collecting money) with colored chunks (expenses)
-// todo list? feature list? ui? make this a project? hahahah
 // todo refactor shit at the end of a feature cycle
+//
+// - some kind of interface. u add items and their costs. then see a 
+//  visualizer showing how many hours it will take to go through that wish list.
+// DONE::
+// √ Add a popup where you can just enter a raw value for your rate and the cost
+//
 //////////
 
 console.log("hello from Time As Money");

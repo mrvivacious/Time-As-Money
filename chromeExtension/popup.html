@@ -21,10 +21,18 @@
     </head>
 
     <body>
-        <h1>Time As Money</h1>
+        <h1>
+            Time As Money
+            <a href="mailto:jvnnvt@gmail.com?Subject=TimeAsMoney" target="_blank" style="float: right; font-size: medium;">
+                Email me feedback
+            </a>
+        </h1>
+
         <p>
             <em>
-                Hover over price tags on any website to see<br>them represented in terms of work-time.
+                Hover over price tags on any website to see
+                <br>
+                costs represented in terms of work-time.
             </em>
         </p>
         <hr>
@@ -39,6 +47,8 @@
 
                 <h3>Hourly rate</h3>
                 $ <input id="input_hourly_rate" type="number" placeholder="7.95">
+                <span id="rate-saved">Saved!</span>
+                
                 <br>
                 <br>
                 <button id="btn_save_rate">Save rate</button>
@@ -46,6 +56,7 @@
 
                 <h3>Duration of average workday</h3>
                 <input id="input_workday_duration" type="number" placeholder="8.0">
+                <span id="duration-saved">Saved!</span>
                 <br>
                 <br>
                 <button id="btn_save_duration">Save hours</button>
@@ -57,22 +68,22 @@
                 <h3>Time needed:</h3>
                 <strong>
                     <p id="p_workdays_required_rounded">
-                        x real workdays
+                        <!-- x real workdays -->
                     </p>
                 </strong>
 
                 <p id="p_workdays_required">
-                    x.xx math workdays
+                    <!-- x.xx math workdays -->
                 </p>
 
                 <strong>
                     <p id="p_work_required_rounded">
-                        x real hours
+                        <!-- x real hours -->
                     </p>
                 </strong>
 
                 <p id="p_work_required">
-                    x.xx math hours
+                    <!-- x.xx math hours -->
                 </p>
             </div>
         </div>

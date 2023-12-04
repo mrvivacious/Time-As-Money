@@ -33,27 +33,29 @@ chrome.storage.sync.get("workdayDuration", function (returnedObject) {
 
 // Setters
 function saveRateToStorage() {
-  console.log("clicked saveRate");
+  // console.log("clicked saveRate");
   let rate = document.getElementById("input_hourly_rate").value;
 
   if (rate) {
     // TODO put below lines in a data interface class of some sort?
     chrome.storage.sync.set({ hourlyRate: rate }, function () {
-      // replace with some kind of gentler visual feedback
-      alert('Saved rate:\n$' + rate);
+      let rateSavedIndicator = document.getElementById('rate-saved');
+      rateSavedIndicator.style.visibility = 'visible';
     });
   }
 }
 
 function saveDurationToStorage() {
-  console.log("clicked saveDuration");
+  // console.log("clicked saveDuration");
   let duration = document.getElementById("input_workday_duration").value;
 
   if (duration) {
     // TODO put below lines in a data interface class of some sort?
     // also, workdayDuration and hourlyRate would be better as keys to a user object rather than individual items
     chrome.storage.sync.set({ workdayDuration: duration }, function () {
-      alert("Duration saved (hours):\n" + duration);
+      let durationSavedIndicator = document.getElementById('duration-saved');
+      durationSavedIndicator.style.visibility = 'visible';
+
     });
   }
 }

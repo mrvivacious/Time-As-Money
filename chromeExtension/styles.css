@@ -1,0 +1,56 @@
+body {
+  width: 600px;
+  font-size: medium;
+
+  /* https://cssgradient.io/ */
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(97,247,255,1) 0%, rgba(244,255,255,1) 76%, rgba(255,255,255,1) 100%);
+}
+
+input {
+  border: 1px solid black;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  height: 30px;
+  padding-left: 10px;
+  font-size: medium;
+}
+
+.fifty-fifty-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.left-side {
+  width: 50%;
+  margin-right: 10px;
+}
+
+.right-side {
+  width: 50%;
+  font-size: larger;
+}
+
+.vertical-line {
+  content: "";
+  border-left: 1px solid #ccc; /* Adjust the color as needed */
+  height: 100%;
+  margin: 0 10px;
+}
+
+button {
+  background-color: #f39c12; /* Choose a cute button color */
+  color: #fff; /* Text color */
+  border: none;
+  padding: 5px 10px; /* Adjust the padding as needed */
+  border-radius: 5px; /* Add rounded corners for a cute look */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+button:hover {
+  background-color: #e67e22; /* Adjust the hover color to your preference */
+}

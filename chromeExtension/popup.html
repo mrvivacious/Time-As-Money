@@ -1,60 +1,81 @@
 <!--
-    two inputs
+    UI notes:
+
+    . maybe eventually a detail page for "wants"
+    that also show time
+    https://dribbble.com/shots/2915160-Daily-UI-004-Emi-Calculator
+
+    . color scheme on this is nice and simple
+    https://dribbble.com/shots/5932195-Minimalist-iPhone-Calculator-Daily-UI-Challenge-004
+
+    . glassmorphic elements?
+
+    . 
+
 -->
 
 <html>
     <head>
         <title>Time As Money</title>
-        <style>
-            body {
-                width: 300px;
-                font-size: large;
-            }
-        </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
         <h1>Time As Money</h1>
-
-        <h3>Cost of item</h3>
-        $ <input id="input_item_cost" type="number" placeholder="20.00">
-        <button>Calculate</button>
-        <br>
-
-        <h3>Hourly rate</h3>
-        $ <input id="input_hourly_rate" type="number" placeholder="7.95">
-        <button id="btn_save_rate">Save rate</button>
-        <br>
-
-        <h3>Duration of average workday</h3>
-        <input id="input_workday_duration" type="number" placeholder="8.0">
-        <button id="btn_save_duration">Save hours</button>
-        <br>
-        <br>
-
-
+        <p>
+            <em>
+                Hover over price tags on any website to see<br>them represented in terms of work-time.
+            </em>
+        </p>
         <hr>
-        <h3>Time needed:</h3>
-        <strong>
-            <p id="p_workdays_required_rounded">
-                x real workdays
-            </p>
-        </strong>
+        <div class="fifty-fifty-container">
+            <div class="left-side">
+                <h3>Cost of item</h3>
+                $ <input id="input_item_cost" type="number" placeholder="20.00">
+                <br>
+                <br>
+                <button>Calculate</button>
+                <br>
 
-        <p id="p_workdays_required">
-            x.xx math workdays
-        </p>
+                <h3>Hourly rate</h3>
+                $ <input id="input_hourly_rate" type="number" placeholder="7.95">
+                <br>
+                <br>
+                <button id="btn_save_rate">Save rate</button>
+                <br>
 
-        <strong>
-            <p id="p_work_required_rounded">
-                x real hours
-            </p>
-        </strong>
+                <h3>Duration of average workday</h3>
+                <input id="input_workday_duration" type="number" placeholder="8.0">
+                <br>
+                <br>
+                <button id="btn_save_duration">Save hours</button>
+            </div>
 
-        <p id="p_work_required">
-            x.xx math hours
-        </p>
+            <div class="vertical-line"></div>
 
+            <div class="right-side">
+                <h3>Time needed:</h3>
+                <strong>
+                    <p id="p_workdays_required_rounded">
+                        x real workdays
+                    </p>
+                </strong>
+
+                <p id="p_workdays_required">
+                    x.xx math workdays
+                </p>
+
+                <strong>
+                    <p id="p_work_required_rounded">
+                        x real hours
+                    </p>
+                </strong>
+
+                <p id="p_work_required">
+                    x.xx math hours
+                </p>
+            </div>
+        </div>
     </body>
     <script src="DataInterface.js"></script>
     <script src="popup/Calculator.js"></script>

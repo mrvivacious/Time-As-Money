@@ -24,11 +24,11 @@ function checkForPrice(event) {
 
   // console.log(htmlElement);
 
-  if (htmlElement.childElementCount > 1) {
+  if (htmlElement && htmlElement.childElementCount > 1) {
     return; // StockX, avoid showing tooltip on larger, unrelated sections of the website. bug?
   }
 
-  if (elementText.includes("$")) {
+  if (elementText && elementText.includes("$")) {
     console.log("=========");
     console.log(elementText);
     elementText = elementText.replaceAll(",", ""); // $10,123.45

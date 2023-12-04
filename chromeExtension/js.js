@@ -16,7 +16,7 @@
 //
 //////////
 
-console.log("hello from Time As Money");
+// console.log("hello from Time As Money");
 
 function checkForPrice(event) {
   let htmlElement = event.target;
@@ -28,9 +28,9 @@ function checkForPrice(event) {
     return; // StockX, avoid showing tooltip on larger, unrelated sections of the website. bug?
   }
 
-  if (elementText && elementText.includes("$")) {
-    console.log("=========");
-    console.log(elementText);
+  if (elementText !== undefined && elementText.includes("$")) {
+    // console.log("=========");
+    // console.log(elementText);
     elementText = elementText.replaceAll(",", ""); // $10,123.45
     let cost = elementText.split("$");
 

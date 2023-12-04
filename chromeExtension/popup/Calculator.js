@@ -8,13 +8,13 @@ function isValidMonetaryFormat(value) {
   }
 
   let moneyRegexLol = /\d+.\d+/i;
-  console.log(moneyRegexLol.exec(value)[0]);
+  // console.log(moneyRegexLol.exec(value)[0]);
 
   return moneyRegexLol.exec(value)[0];
 }
 
 function convertRawHoursToClockTime(hoursWorkedInTotal, workdayDuration) {
-  return (hoursWorkedInTotal / workdayDuration) + ' workdays';
+  return (hoursWorkedInTotal / workdayDuration) + ' math workdays';
 }
 
 function calculateWork() {
@@ -27,7 +27,7 @@ function calculateWork() {
 
   if (hourlyRate && itemCost) {
     let work = calculateWorkRequired(itemCost, hourlyRate);
-    console.log(work);
+    // console.log(work);
 
     document.getElementById("p_work_required_rounded").innerText =
       Math.ceil(work) + " real hours";
@@ -40,7 +40,7 @@ function calculateWork() {
     document.getElementById("p_workdays_required_rounded").innerText =
       Math.ceil(parseFloat(workdaysRequired)) + " real workdays";
 
-    document.getElementById("p_workdays_required").innerText = workdaysRequired + ' math workdays';
+    document.getElementById("p_workdays_required").innerText = workdaysRequired;
   }
 }
 

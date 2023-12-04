@@ -42,8 +42,9 @@ input {
 }
 
 button {
-  background-color: #f39c12; /* Choose a cute button color */
-  color: #fff; /* Text color */
+  /* background-color: #f39c12;  */
+  background-color: #56a2ff; /* Choose a cute button color */
+  color: rgb(0, 0, 0); /* Text color */
   border: none;
   padding: 5px 10px; /* Adjust the padding as needed */
   border-radius: 5px; /* Add rounded corners for a cute look */
@@ -52,5 +53,17 @@ button {
 }
 
 button:hover {
-  background-color: #e67e22; /* Adjust the hover color to your preference */
+  background-color: #2277e6; /* Adjust the hover color to your preference */
+}
+
+#rate-saved {
+  visibility: hidden;
+  color: green;
+  font-size: large;
+}
+
+#duration-saved {
+  visibility: hidden;
+    color: green;
+    font-size: large;
 }

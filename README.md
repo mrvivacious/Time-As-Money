@@ -4,19 +4,33 @@ Convert monetary prices to hourly prices.
 
 When you put your mouse over a price tag, you can see how many hours of work it'll take to make that amount of money.
 
-
-### Version 1.0 feature planning:
-
-- Hover on price displays work required in a readable, large popup
-- Should work on Amazon, Best Buy, Walmart, whatever the most [popular shopping sites](https://www.semrush.com/website/top/global/e-commerce-and-retail/) are
-- Chrome storage sync for any data inputted by the user (cloud storage). Can move to firebase or smth if app matures significantly...
-- Use [Jest](https://jestjs.io/docs/getting-started) for tests (learning experience). Ensure that node files are not published to app store when releasing
-- 
-
-
 ---
 
-### Notes for development:
+```
+!! Test app with Amazon, Best Buy, Walmart, etc websites
+
+TODO::
+Popup has calculator
+Popup allows user to save their hourly wage and workday duration
+Popup shows cost in terms of hours + workdays
+
+Hover over price shows converted price
+Tooltip shows calculation. Be sure to append this to the existing tooltip
+ so to not overwrite website functionality or, idk, aria-label stuff
+
+Wishlist feature, new tab
+Save items and their prices
+See "wishlist cost" in hours and workdays
+
+Marketing: icon, banners for chrome store submission
+YouTube: launch. walkthrough. tutorials. idk
+
+In future, add a way to account for income tax (depends on each state)
+Maybe also add an actual UI.
+Add code tests somehow to validate the javascript and app's functions for development sake.
+DONE::
+
+```
 
 Potential data schema:
 

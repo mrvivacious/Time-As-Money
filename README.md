@@ -1,6 +1,8 @@
 # Time-As-Money
 Convert monetary prices to hourly prices.
 
+[Chrome extension](https://chromewebstore.google.com/detail/time-as-money/pjhijfjkkfmmniikmfkenjpjbfipkcib)
+
 
 When you put your mouse over a price tag, you can see how many hours of work it'll take to make that amount of money.
 
